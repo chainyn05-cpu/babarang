@@ -1,0 +1,13 @@
+BABARANG STAFF LOGIN UPDATE
+
+- Manager signs in with Chainyn05@gmail.com and the existing Manager password.
+- Staff registers with name + one-time code + their chosen password; no personal Gmail required.
+- Afterwards staff logs in with their code + password. Browser session is remembered on that device.
+- Codes are one-use and expire after 7 days. Manager must create existing staff records first and generate one code per staff.
+- Maximum 15 active staff is enforced in app and by database trigger after migration.
+- Staff cannot approve entries; database RLS remains the authority for manager-only approval.
+
+Deployment still requires applying the additive migration and deploying the staff-register Edge Function. Test in Preview first.
+Never expose SUPABASE_SERVICE_ROLE_KEY in browser/Vercel VITE variables.
+
+Optional cleanup: OPTIONAL_DELETE_TEST_UPSELLS.sql deletes ALL upsell_entries. Run only after backup and only if all entries are test data. It does not delete staff/profiles/auth users.
