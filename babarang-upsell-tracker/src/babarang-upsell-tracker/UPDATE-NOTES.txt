@@ -1,0 +1,14 @@
+BABARANG UPSELL TRACKER - MUSIC PLAYER UPDATE
+
+Changes in this package:
+- Adds a user-controlled YouTube player for video ID 5s1V2ftQjKY.
+- Player is closed by default; it does not autoplay on page load.
+- Clicking Pause Music removes the embedded player to stop playback.
+- Keeps existing Supabase integration, login, staff, entries, and verification logic unchanged.
+- Existing Daily Report and Monthly Top 3 are already present in this source.
+
+Important:
+- This package does not include Telegram notifications yet; those need a secure backend function and Bot Token configured as a server-side secret.
+- No Supabase schema or database migration is included or required for the music player.
+- Build could not be verified in this environment because Vite dependencies are not installed. Run `npm install` and `npm run build` locally or let Vercel build it in a preview deployment before production.
+- Use this project folder as the project root only if it matches the Root Directory used by your existing Vercel project. Keep a copy of the currently deployed source before replacing files.
